@@ -2490,6 +2490,12 @@ body.mobile-nav-active #mobile-nav-toggle {
   }
 }
 
+@media (max-width: 600px) {
+  .banner-right {
+    visibility: hidden;
+  }
+}
+
 /*-------- End Banner Area ------------*/
 /*-------- Start home-about Area ------------*/
 @media (max-width: 767px) {
