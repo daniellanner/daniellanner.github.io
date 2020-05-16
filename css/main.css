@@ -2438,10 +2438,11 @@ body.mobile-nav-active #mobile-nav-toggle {
 /*-------- Start Banner Area ------------*/
 .banner-area {
   background: #fff;
+  vertical-align: middle;
 }
 
 .banner-area .fullscreen {
-  height: 640px !important;
+  height: 100vh !important;
 }
 
 .banner-left h6 {
