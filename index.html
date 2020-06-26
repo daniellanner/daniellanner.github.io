@@ -30,8 +30,18 @@
 							<br>
 							<p>
 								I'm Daniel Lanner, a software developer.<br>
-								Please get in touch at hello@daniellanner.io<br>
-								or find me on these platforms.
+								Please get in touch at 
+
+								<text class="tooltip" id="copy-address">
+									hello@daniellanner.io.
+									<span class="tooltiptext">
+										Copy to clipboard.
+									</span>
+								</text>
+								
+							</p>
+							<p>
+								Alternatively, find me on these platforms.
 							</p>
 							<a href="https://github.com/daniellanner" class="primary-btn"><img class="img-fluid" src="img/icon_github.png" alt="" height="48" width="48"></a>
 							<a href="https://www.linkedin.com/in/daniellanner" class="primary-btn"><img class="img-fluid" src="img/icon_linkedin.png" alt="" height="48" width="48"></a>
@@ -48,4 +58,11 @@
 			</section>
 			<!-- End banner Area -->
 		</body>
+
+		<script>
+			var text = document.getElementById("copy-address");
+			text.onclick = function(){
+				navigator.clipboard.writeText("hello@daniellanner.io");
+			}
+		</script>
 	</html>
