@@ -61,8 +61,51 @@
 
 		<script>
 			var text = document.getElementById("copy-address");
-			text.onclick = function(){
-				navigator.clipboard.writeText("hello@daniellanner.io");
+			var copied = false;
+
+			text.onmouseleave = function()
+			{
+				// avoid restructuring every time
+				if(!copied)
+				{
+					return;
+				}
+
+				var tooltips = document.getElementsByClassName("tooltiptext");
+
+				if(tooltips.length == 0)
+				{
+					return;
+				}
+
+				var span = tooltips[0];
+				
+				span.removeChild(span.firstChild);
+				span.appendChild(document.createTextNode("Copy to clipboard."));
+
+				copied = false;
+			}
+
+			text.onclick = function()
+			{
+				navigator.clipboard.writeText("hello@daniellanner.io")
+				.then( () => 
+				{
+					var tooltips = document.getElementsByClassName("tooltiptext");
+
+					if(tooltips.length == 0)
+					{
+						return;
+					}
+
+					var span = tooltips[0];
+
+					span.removeChild(span.firstChild);
+					span.appendChild(document.createTextNode("Copied succesfully."));
+
+					// make sure to change text back
+					copied = true;
+				});
 			}
 		</script>
 	</html>
