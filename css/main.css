@@ -408,21 +408,9 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 60px;
 }
 
-@media (max-width: 991px) {
-  .banner-left h1 {
-    font-size: 30px;
-  }
-}
-
 .banner-left .primary-btn:hover {
   box-shadow: 0px 20px 20px 0px rgba(132, 144, 255, 0.3);
   border-radius:100px;
-}
-
-@media (max-width: 767px) {
-  .banner-left {
-    margin-top: 100px;
-  }
 }
 
 .banner-right .banner-left{
@@ -433,19 +421,25 @@ h1, h2, h3, h4, h5, h6 {
   .banner-right .banner-left {
     align-self: center !important;
   }
-}
 
-@media (max-width: 767px) {
-  .banner-left{
-    width: 70%;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
+  .banner-left h1 {
+    font-size: 30px;
   }
 }
 
 @media (max-width: 767px) {
   .banner-right {
     display: none;
+  }
+
+  .banner-left{
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+
+  .tooltip .tooltiptext {
+    width: 96px;
   }
 }
