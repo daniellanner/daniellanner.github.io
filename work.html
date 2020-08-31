@@ -1,0 +1,127 @@
+	<!DOCTYPE html>
+	<html lang="zxx" class="no-js">
+	<head>
+		<!-- Mobile Specific Meta -->
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<!-- Favicon by icon king at https://freeicons.io/profile/3 -->
+		<link rel="shortcut icon" href="img/favicon.svg">
+		<!-- Author Meta -->
+		<meta name="author" content="Daniel Lanner">
+		<!-- Meta Description -->
+		<meta name="description" content="Personal website with collection of links.">
+		<!-- Meta Keyword -->
+		<meta name="keywords" content="daniel lanner">
+		<!-- meta character set -->
+		<meta charset="UTF-8">
+		<!-- Site Title -->
+		<title>Daniel Lanner</title>
+
+		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet"> 
+			<link rel="stylesheet" href="css/bootstrap.css">
+			<link rel="stylesheet" href="css/main.css">
+		</head>
+		<body>	
+			<header id="header">
+				<div class="container main-menu">
+					<nav id="nav-menu-container">
+						<ul class="nav-menu">
+							<li><a href="index.html">Home</a></li>
+							<li><a href="work.html">Work</a></li>
+						</ul>
+					</nav>		    		
+				</div>
+			</header>
+
+			<!-- start banner Area -->
+			<section class="banner-area">
+				<div class="container">
+					<div class="row fullscreen align-items-center justify-content-between">
+						<div class="col-lg-6 col-md-6 banner-left">
+							<h5>Maxon</h5>
+							<ul>
+								<li>Unannounced Project</li>
+								<li>
+									<a href="https://assetstore.unity.com/packages/tools/integration/cineware-by-maxon-158381">Cineware for Unity</a>
+								</li>
+								<li>
+									<a href="https://www.maxon.net/en-us/products/cineware/after-effects/">Cineware for After Effects (maintenance)</a>
+								</li>
+								<li>
+									<a href="https://www.maxon.net/en-us/products/cineware-for-after-effects/cinema-4d-lite-activated/">Cinema 4D Lite (maintenance)</a>
+								</li>
+							</ul>
+							<br>
+							<h5>Pixomondo</h5>
+							<ul>
+								<li>
+									<a href="https://natgeoencounter.com/">National Geographic Encounter: Ocean Odyssey</a>
+								</li>
+								<li>
+									<a href ="https://connect.unity.com/p/siemens-inspiro-metro-configurator">Siemens Inspiro Configurator</a>
+								</li>
+							</ul>
+							<br>
+							<h5>Rudy Games</h5>
+							<ul>
+								<li>
+									<a href="https://rudy-games.com/interaction/en/">Interaction</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>			
+	
+			</section>
+			<!-- End banner Area -->
+		</body>
+
+		<script>
+			var text = document.getElementById("copy-address");
+			var copied = false;
+
+			text.onmouseleave = function()
+			{
+				// avoid restructuring every time
+				if(!copied)
+				{
+					return;
+				}
+
+				var tooltips = document.getElementsByClassName("tooltiptext");
+
+				if(tooltips.length == 0)
+				{
+					return;
+				}
+
+				var span = tooltips[0];
+				
+				span.removeChild(span.firstChild);
+				span.appendChild(document.createTextNode("Copy to clipboard."));
+
+				copied = false;
+			}
+
+			text.onclick = function()
+			{
+				navigator.clipboard.writeText("hello@daniellanner.io")
+				.then( () => 
+				{
+					var tooltips = document.getElementsByClassName("tooltiptext");
+
+					if(tooltips.length == 0)
+					{
+						return;
+					}
+
+					var span = tooltips[0];
+
+					span.removeChild(span.firstChild);
+					span.appendChild(document.createTextNode("Copied successfully."));
+
+					// make sure to change text back
+					copied = true;
+				});
+			}
+		</script>
+	</html>
