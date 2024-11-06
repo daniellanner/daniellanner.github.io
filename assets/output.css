@@ -1632,10 +1632,6 @@ input:checked + .toggle-bg {
   line-height: 2.25rem;
 }
 
-.leading-normal {
-  line-height: 1.5;
-}
-
 .text-black {
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
@@ -1965,22 +1961,6 @@ input:checked + .toggle-bg {
 
   .md\:p-12 {
     padding: 3rem;
-  }
-}
-
-@media (min-width: 1536px) {
-  .\32xl\:text-4xl {
-    font-size: 2.25rem;
-    line-height: 2.5rem;
-  }
-
-  .\32xl\:text-5xl {
-    font-size: 3rem;
-    line-height: 1;
-  }
-
-  .\32xl\:leading-relaxed {
-    line-height: 1.625;
   }
 }
 
