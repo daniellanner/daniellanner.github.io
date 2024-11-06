@@ -1632,6 +1632,10 @@ input:checked + .toggle-bg {
   line-height: 2.25rem;
 }
 
+.leading-normal {
+  line-height: 1.5;
+}
+
 .text-black {
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
@@ -1973,6 +1977,10 @@ input:checked + .toggle-bg {
   .\32xl\:text-5xl {
     font-size: 3rem;
     line-height: 1;
+  }
+
+  .\32xl\:leading-relaxed {
+    line-height: 1.625;
   }
 }
 
