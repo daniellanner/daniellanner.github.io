@@ -1,7 +1,7 @@
 module.exports = {
   darkMode: 'class',
   content: [
-    "./test.html",
+    "./index.html",
     "./node_modules/flowbite/**/*.js"
   ],
   theme: {

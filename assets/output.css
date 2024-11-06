@@ -1143,6 +1143,11 @@ input:checked + .toggle-bg {
   grid-column: span 7 / span 7;
 }
 
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .my-2 {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
@@ -1270,6 +1275,10 @@ input:checked + .toggle-bg {
 
 .w-full {
   width: 100%;
+}
+
+.max-w-\[2560px\] {
+  max-width: 2560px;
 }
 
 .flex-1 {
@@ -1952,6 +1961,18 @@ input:checked + .toggle-bg {
 
   .md\:p-12 {
     padding: 3rem;
+  }
+}
+
+@media (min-width: 1536px) {
+  .\32xl\:text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+
+  .\32xl\:text-5xl {
+    font-size: 3rem;
+    line-height: 1;
   }
 }
 
